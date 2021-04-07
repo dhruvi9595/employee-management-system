@@ -1,0 +1,41 @@
+<div class="container">
+          <br>
+              <div>
+               
+  
+                  <div class="form-row">  
+                      <div class="col-md-6 mb-3">
+                          <label class="form-control-label" for="field_name">Name</label>
+                          <input type="text" class="form-control" name="name" id="field_name" required 
+                                [(ngModel)]= "employee_name"/>
+                          
+                      </div>   
+                    <div class="col-md-6 mb-3">
+                        <label class="form-control-label" for="field_salary">Salary</label>
+                        <input type="number" class="form-control" name="salary" id="field_salary" required
+                            pattern="^[0-9]+[.]{0,1}[0-9]{0,2}$" [(ngModel)]= "employee_salary"
+                           />
+                       
+                    </div> 
+                    <div class="col-md-6 mb-3">
+                        <label class="form-control-label" for="field_age">Age</label>
+                        <input type="number" class="form-control" name="age" id="field_age"
+                        [(ngModel)]= "employee_age" required/>
+                        
+                    </div>
+                </div> 
+                  
+                      
+                      
+              </div>
+              <div class="row justify-content-center">
+                  <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()" style="margin: 5Px ">
+                      &nbsp;<span >Cancel</span>
+                  </button>
+                  <button type="submit" id="save-entity" (click)="save()" class="btn btn-primary" style="margin: 5Px "> <!-- [disabled]="editForm.invalid || isSaving" -->
+                      &nbsp;<span >Save</span>
+                  </button>
+              </div>
+          
+  </div>
+  
