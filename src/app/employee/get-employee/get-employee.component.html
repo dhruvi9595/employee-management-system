@@ -1,0 +1,44 @@
+<div>
+    <h2 id="page-heading">
+    
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-customer" [routerLink]="['/customer/new']" style="margin-top: 16px;">
+            
+            <span  jhiTranslate="gstAccountingApp.customer.home.createLabel" class="d-none d-md-inline">
+            Create a new Customer
+            </span>
+        </button>
+    </h2>
+    <br/>
+    <div >
+        <table >
+            <thead>
+            <tr>
+            <th scope="col"  ><span >Name</span> </th>
+            <th scope="col"  style="text-align: right;"><span >Salary</span></th>
+            <th scope="col" style="text-align: right;" ><span >age</span> </th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let employees of employee ;trackBy: trackId">
+                <td>{{employees.employee_name}}</td>
+                <td style="text-align: right;">{{employees.employee_salary | number: '.2'}}</td>
+                <td>{{employees.employee_age}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <!-- <button type="submit"
+                                [routerLink]="['/employee', employees.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <span class="d-none d-md-inline" >Edit</span>
+                        </button>
+                        <button (click)="open(content, employees.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="d-none d-md-inline" >Delete</span>
+                        </button> -->
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

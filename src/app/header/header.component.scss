@@ -1,0 +1,14 @@
+$topnav-background-color: BLUE;
+:host {
+  .navbar {
+    background-color: $topnav-background-color;
+    height: 55px;
+    margin-left: 227px;
+    .navbar-brand {
+      color: #fff;
+    }
+    .nav-item > h3 {
+      color: #FFF;
+    }
+  }
+}
